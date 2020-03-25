@@ -789,6 +789,7 @@ func triggerSimpleUpdateEvent(eventType string, lobby *Lobby) {
 type LobbyPageData struct {
 	Players        []*Player
 	Port           int
+	PublicPort     int
 	LobbyID        string
 	WordHints      []*WordHint
 	Round          int
@@ -1031,6 +1032,7 @@ func ShowLobby(w http.ResponseWriter, r *http.Request) {
 
 			pageData := &LobbyPageData{
 				Port:           *portHTTP,
+				PublicPort:     *publicPortHTTP,
 				Players:        lobby.Players,
 				LobbyID:        lobby.ID,
 				Round:          lobby.Round,
@@ -1056,6 +1058,7 @@ func ShowLobby(w http.ResponseWriter, r *http.Request) {
 		} else {
 			pageData := &LobbyPageData{
 				Port:           *portHTTP,
+				PublicPort:     *publicPortHTTP,
 				Players:        lobby.Players,
 				LobbyID:        lobby.ID,
 				Round:          lobby.Round,

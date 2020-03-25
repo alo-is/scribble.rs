@@ -11,12 +11,14 @@ import (
 )
 
 var (
-	errorPage *template.Template
-	portHTTP  *int
+	errorPage      *template.Template
+	portHTTP       *int
+	publicPortHTTP *int
 )
 
 func main() {
 	portHTTP = flag.Int("portHTTP", 8080, "defines the port to be used for http mode")
+	publicPortHTTP = flag.Int("publicPortHTTP", 8080, "defines the port to be used for http mode in public templates (useful behind a reverse proxy)")
 
 	flag.Parse()
 
