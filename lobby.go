@@ -31,7 +31,7 @@ var (
 		MaxRounds:            20,
 		MinMaxPlayers:        2,
 		MaxMaxPlayers:        24,
-		MinClientsPerIPLimit: 1,
+		MinClientsPerIPLimit: 20,
 		MaxClientsPerIPLimit: 24,
 	}
 	supportedLanguages = []string{"English", "Italian", "French"}
@@ -74,7 +74,7 @@ func createDefaultLobbyCreatePageData() *CreatePageData {
 		Rounds:            "4",
 		MaxPlayers:        "12",
 		CustomWordsChance: "50",
-		ClientsPerIPLimit: "1",
+		ClientsPerIPLimit: "24",
 		EnableVotekick:    true,
 	}
 }
